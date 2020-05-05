@@ -27,6 +27,11 @@ struct MissionView: View {
                         .frame(maxWidth: geo.size.width * 0.7)
                         .padding(.top)
                     
+                    Text("Launch Date: " + self.mission.formattedLaunchDate)
+                        .foregroundColor( self.mission.formattedLaunchDate == "N/A" ? .red : .blue)
+                        .fontWeight(.heavy)
+                        .font(.headline)
+                    
                     Text(self.mission.description)
                         .padding()
                     
